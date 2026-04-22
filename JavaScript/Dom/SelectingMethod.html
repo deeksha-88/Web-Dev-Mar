@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="xyz">Hello guys</p>
+
+    <p id="abc"> Web Development </p>
+
+
+    <div class="myclass">AI Developer - 0</div>
+
+    <div class="myclass">ML Developer - 1</div>
+
+    <p>Plain Simple Paragraph Tag</p>
+
+    <div class="box">Module 1</div>
+    <div class="box">Module 2</div>
+
+    <ul id="data">
+       
+    </ul>
+
+<script>
+    //DOM 
+    //Element = HTML Tag
+    //document = Webpage
+    //Selecting Method - Select Means To Choose HTML Tag through JS
+
+    //1.getElementById("Id Name value")
+
+     var ele  =     document.getElementById("xyz")
+     console.log(ele)
+
+    var ele1 = document.getElementById("abc")
+    console.log(ele1)
+
+    console.log(ele1.textContent)
+
+    //2.getElementByClassName
+       
+   var ele2 = document.getElementsByClassName("myclass")
+
+   console.log(ele2)
+
+   console.log(ele2[1])
+   console.log(ele2[1].textContent)
+
+
+   //3. Tag Without ID and Class - TagName
+
+   var ele3 = document.getElementsByTagName("p")
+   console.log(ele3)
+   console.log(ele3[2])
+   console.log(ele3[2].textContent)
+
+   //4. querySelector - ONLY SELECTS FIRST - ELEMENT / TAG 
+   // - FOLLOW THE RULES OF CSS SELECTOR - #IDNAME  , .CLASSNAME , TAGNAME
+
+   const xyz = document.querySelector(".box")
+   
+   console.log(xyz);
+
+
+   //querySelectorALL - IT WILL SELECT ALL THE ELMENTS/Tag
+
+   const pqr = document.querySelectorAll(".box")
+   console.log(pqr)
+   console.log(pqr[0].textContent)
+
+
+
+   //Js Part
+   
+    const ul = document.getElementById("data")
+
+   //CreateElement - li tag
+    const list =  document.createElement("li")
+    list.textContent = "Water"
+
+    ul.appendChild(list)
+     
+
+   
+</script>
+
+</body>
+</html>
